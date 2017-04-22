@@ -20,6 +20,12 @@ From [Meteor Docs](https://guide.meteor.com/structure.html#load-order):
 
 > This approach differs from some popular conventions, and is merely the opinionated approach of this boilerplate's developer.
 
+### Installation
+
+**Do not simply clone the repository (or a fork) directly into your application.**
+
+Download the repository as a zip and extract it into an empty app directory to either initialize or propagate your codebase. This will be the case if the application was initialized using [meteor_init](https://github.com/robertdavid010/meteor_init)
+
 **TODO**
 
 1. Add base code files to support minimal application model CRUD.
