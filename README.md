@@ -24,7 +24,26 @@ From [Meteor Docs](https://guide.meteor.com/structure.html#load-order):
 
 **Do not simply clone the repository (or a fork) directly into your application.**
 
-Download the repository as a zip and extract it into an empty app directory to either initialize or propagate your codebase. This will be the case if the application was initialized using [meteor_init](https://github.com/robertdavid010/meteor_init)
+#### Prepare directory
+
+You will want to remove all existing placeholder files in your new application directory, but keeping the application library and npm related files and directories.
+
+You can run the below to prepare the top level application directory for this boilerplate:
+
+```bash
+rm .gitignore
+rm -rf client import lib packages private public server
+
+wget https://raw.githubusercontent.com/robertdavid010/meteor_init/master/.gitignore
+wget https://github.com/robertdavid010/meteor_boilerplate/archive/master.zip
+```
+
+#### Download boilerplate
+
+
+Download this repository [as a zip](https://github.com/robertdavid010/meteor_boilerplate/archive/master.zip) and extract it into the top level empty Meteor app directory to either initialize or propagate your codebase. A basic way to setup the new app is with the [meteor_init](https://github.com/robertdavid010/meteor_init) method.
+
+
 
 **TODO**
 
