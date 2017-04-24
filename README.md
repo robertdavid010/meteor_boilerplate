@@ -8,6 +8,8 @@ Designed to work in conjunction with [meteor_init](https://github.com/robertdavi
 
 For file structure, this boilerplate uses built in Meteor "eager" loading of code files. It is a good idea to be familiar with the load sequence priority. Also this means the boilerplate is intended to support only limited use of code file imports as required.
 
+> This approach differs from some popular conventions, and is merely the opinionated approach of this boilerplate's developer.
+
 From [Meteor Docs](https://guide.meteor.com/structure.html#load-order):
 
 **Default file load order**
@@ -18,11 +20,9 @@ From [Meteor Docs](https://guide.meteor.com/structure.html#load-order):
 1. Files with deeper paths are loaded next
 1. Files are then loaded in alphabetical order of the entire path
 
-> This approach differs from some popular conventions, and is merely the opinionated approach of this boilerplate's developer.
-
 ### Installation
 
-**Do not simply clone the repository (or a fork) directly into your application.**
+> **Do not simply clone the repository (or a fork) directly into your application.**
 
 #### Prepare directory
 
