@@ -1,4 +1,6 @@
 // init.js
+import Popper from 'popper.js';
+window.Popper = Popper;
 
 if (Meteor.isClient) {
 
