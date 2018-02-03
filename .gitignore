@@ -13,3 +13,5 @@ packages/
 .sass-cache/
 
 .meteor
+
+package.json
