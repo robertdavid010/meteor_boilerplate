@@ -1,5 +1,7 @@
 // mainAppFrame.js
 
+import 'bootstrap';
+
 if (Meteor.isClient) {
 
 	Template.mainAppFrame.hooks({
