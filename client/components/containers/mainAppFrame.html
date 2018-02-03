@@ -1,0 +1,22 @@
+<template name="mainAppFrame">
+<!-- Template: mainAppFrame; File: mainAppFrame.html -->
+
+<div class="app-wrapper">
+	{{> Navbar}}
+
+	<div class="app-body">
+		{{> Sidebar menuItems=mainAppMenu}}
+		<main class="main">
+
+			<div class="container">
+				{{> Template.dynamic template=contentMain}}
+			</div>
+		</main>
+		{{!-- {{> Aside}} --}}
+	</div>
+	{{!-- {{> Footer}} --}}
+	
+</div>
+	
+<!-- END Template: mainAppFrame; File: mainAppFrame.html -->
+</template>
