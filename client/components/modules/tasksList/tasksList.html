@@ -3,7 +3,23 @@
 <h3>Tasks List</h3>
 
 
-	<a class="btn btn-default btn-lg" data-toggle="EXO-modal" href="#EXO-modal" data-route="">Modal</a>
+		{{!-- data-context='{"template":"modalTester2","modalbtns":"false","test":"this is testing context","data":{"dataKey1":"value1"}}' --}}
+	<a class="btn btn-default btn-lg" 
+		href=""
+		data-toggle="master-modal"
+		data-route="/modalTester2?routeparam=YES"
+		data-title="test modal"
+		data-size="md"
+		>
+		Modal
+	</a>
+
+
+	<a class="btn btn-secondary" 
+		data-toggle="master-modal"
+		>
+		Basic
+	</a>
 
 
 <!-- END Template: tasksList; File: tasksList.html -->
