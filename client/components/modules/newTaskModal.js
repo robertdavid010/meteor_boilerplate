@@ -13,7 +13,7 @@ if (Meteor.isClient) {
 	})
 
 	Template.newTaskModal.onCreated(function () {
-		console.log("we created the new task template");
+		
 	});
 
 }

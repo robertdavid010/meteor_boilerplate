@@ -5,12 +5,17 @@
 	{{> mainNavbar}}
 
 	<div class="app-body">
-		{{!-- {{> Sidebar menuItems=mainAppMenu}} --}}
+
 		<main class="main">
 
 			<div class="container">
-				{{> Template.dynamic template=contentMain}}
+				<div class="row justify-content-md-center">
+					<div class="col-md-8 col-">
+					{{> Template.dynamic template=contentMain}}
+					</div>
+				</div>
 			</div>
+
 		</main>
 
 	</div>

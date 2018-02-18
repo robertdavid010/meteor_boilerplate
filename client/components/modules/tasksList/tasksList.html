@@ -2,25 +2,56 @@
 <!-- Template: tasksList; File: tasksList.html -->
 <h3>Tasks List</h3>
 
+<ul id="status-tabs" class="nav nav-tabs nav-fill" role="tablist">
+  <li class="nav-item">
+    <a id="incomplete-tasks"
+	    class="nav-link {{#if eq status 'incomplete'}}active{{/if}}"
+	    data-param="incomplete"
+	    href="#">Incomplete</a>
+  </li>
+  <li class="nav-item">
+    <a id="completed-tasks"
+	    class="nav-link {{#if eq status 'completed'}}active{{/if}}"
+	    data-param="completed"
+	    href="#">Completed</a>
+  </li>
+</ul>
 
-		{{!-- data-context='{"template":"modalTester2","modalbtns":"false","test":"this is testing context","data":{"dataKey1":"value1"}}' --}}
-	<a class="btn btn-default btn-lg" 
-		href=""
-		data-toggle="master-modal"
-		data-route="/modalTester2?routeparam=YES"
-		data-title="test modal"
-		data-size="md"
-		>
-		Modal
-	</a>
+<ul class="list-unstyled">
+	{{#each tasks status}}
+	<div class="card my-2">
+		<div class="card-body py-1">
+		  <li class="media mb-3">
+		    <div class="media-body">
+		      <h5 class="mt-0 mb-1">{{title}}</h5>
+		      {{content}}
+		    </div>
+		    {{!-- <img class="ml-3" src="..." alt="..."> --}}
+		    <a href="" class="btn btn-sm btn-secondary" data-action="complete-task" data-id="{{_id}}">&times;</a>
+		  </li>
+	  </div>
+  </div>
+  {{/each}}
+</ul>
+
+{{!-- <a class="btn btn-default btn-lg" 
+	href=""
+	data-toggle="master-modal"
+	data-route="/modalTester2?routeparam=YES"
+	data-title="test modal"
+	data-size="md"
+	data-modalbtns="false"
+	>
+	Modal
+</a>
 
 
-	<a class="btn btn-secondary" 
-		data-toggle="master-modal"
-		>
-		Basic
-	</a>
-
+<a class="btn btn-secondary" 
+	data-toggle="master-modal"
+	>
+	Basic
+</a>
+ --}}
 
 <!-- END Template: tasksList; File: tasksList.html -->
 </template>
