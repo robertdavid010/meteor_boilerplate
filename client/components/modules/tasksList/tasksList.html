@@ -4,14 +4,14 @@
 
 <ul id="status-tabs" class="nav nav-tabs nav-fill" role="tablist">
   <li class="nav-item">
-    <a id="incomplete-tasks"
-	    class="nav-link {{#if eq status 'incomplete'}}active{{/if}}"
+    <a class="nav-link {{#if eq status 'incomplete'}}active{{/if}}"
+	    data-action="select-tab"
 	    data-param="incomplete"
 	    href="#">Incomplete</a>
   </li>
   <li class="nav-item">
-    <a id="completed-tasks"
-	    class="nav-link {{#if eq status 'completed'}}active{{/if}}"
+    <a class="nav-link {{#if eq status 'completed'}}active{{/if}}"
+	    data-action="select-tab"
 	    data-param="completed"
 	    href="#">Completed</a>
   </li>
@@ -21,13 +21,15 @@
 	{{#each tasks status}}
 	<div class="card my-2">
 		<div class="card-body py-1">
-		  <li class="media mb-3">
+		  <li class="media">
 		    <div class="media-body">
 		      <h5 class="mt-0 mb-1">{{title}}</h5>
 		      {{content}}
 		    </div>
 		    {{!-- <img class="ml-3" src="..." alt="..."> --}}
-		    <a href="" class="btn btn-sm btn-secondary" data-action="complete-task" data-id="{{_id}}">&times;</a>
+		    {{#unless eq status 'completed'}}
+			    <a href="" class="btn btn-sm btn-secondary align-self-center" data-action="complete-task" data-id="{{_id}}">&times;</a>
+		    {{/unless}}
 		  </li>
 	  </div>
   </div>
