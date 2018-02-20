@@ -93,6 +93,7 @@ However the issue with the above is that unless you store the value as boolean i
 ```
 
 All basic comparison operators are supported:
+
 |Javascript|Helper|
 |---|---|
 |===|eq|
