@@ -87,7 +87,7 @@ However the issue with the above is that unless you store the value as boolean i
 
 *Boilerplate Comparison Helpers*
 ```handlebars
-{{# eq status 'checked'}}
+{{#if eq status 'checked'}}
 <!-- Render some element -->
 {{/if}}
 ```
