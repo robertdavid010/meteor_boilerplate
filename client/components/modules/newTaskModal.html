@@ -1,5 +1,8 @@
 <template name="newTaskModal">
 
-{{> quickForm schema=Schemas.task collection="Tasks" id="newTaskModalForm" type="insert"}}
+{{> quickForm schema=Schemas.task collection="Tasks" id="newTaskModalForm" type="insert" buttonContent=formbtns}}
 	
+{{#unless modalview}}
+<h5>This is a modal view</h5>
+{{/unless}}
 </template>
