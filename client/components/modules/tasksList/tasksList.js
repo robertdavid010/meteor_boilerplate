@@ -4,8 +4,11 @@ if (Meteor.isClient) {
 
 	Template.tasksList.onCreated(function () {
 		var self = this;
-		self.setCompleted = function (id) {
+		self.completeTask = function (id) {
 			Tasks.update({_id:id},{$set:{status:"completed"}});
+		}
+		self.deleteTask = function (id) {
+			Tasks.remove(id);
 		}
 	});
 
@@ -15,7 +18,7 @@ if (Meteor.isClient) {
 			return FlowRouter.getParam("status") || "incomplete"; 
 		},
 		tasks: function (param) {
-			return Tasks.find({status:param});
+			return Tasks.find({status:param},{sort:{updatedAt:-1}});
 		}
 	});
 
@@ -31,7 +34,12 @@ if (Meteor.isClient) {
 		"click [data-action='complete-task']" : function (event, templ) {
 			event.preventDefault();
 			var id = event.currentTarget.dataset.id;
-			templ.setCompleted(id);
+			templ.completeTask(id);
+		},
+		"click [data-action='delete-task']" : function (event, templ) {
+			event.preventDefault();
+			var id = event.currentTarget.dataset.id;
+			templ.deleteTask(id);
 		}
 	});
 }

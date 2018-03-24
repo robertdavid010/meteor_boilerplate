@@ -78,6 +78,8 @@ Tasks.attachSchema(Schemas.MasterTaskSchema);
 
 There is also included several global Blaze helpers. Most interesting being the comparison helpers. These allow for non-boolean values to be compared simple in the Blaze template. To illustrate:
 
+There is of course many approaches to this that follow an original [handlebars pattern](http://doginthehat.com.au/2012/02/comparison-block-helper-for-handlebars-templates/#comment-44). This approach is designed to have a more elegant feel with a more ternary style than putting operators in quotes as "===". This is by placing the operator as the function for the first paramter of the helper as a shortened .
+
 *Tyipcal Blaze*
 ```handlebars
 {{#if checked}}
