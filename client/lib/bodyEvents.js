@@ -1,6 +1,5 @@
 // bodyEvents.js
 
-
 if (Meteor.isClient) {
 	
 	Template.body.events({
@@ -22,11 +21,23 @@ if (Meteor.isClient) {
       window.focus();
     },
 
-    /***** Global event to reset bootstrap states on UI elements after click *****/
+    /***** Global Bootstrap events *****/
     "mouseup a, mouseup button, mouseup .btn:not(select), mouseup .list-group-item, mouseup option" : function (event) {
+      // Remove focus on clicked UI elements
       $(event.currentTarget).blur();
     },
+    "mouseup .navbar-nav a, mouseup .navbar-nav .btn": function (event) {
+    	// Collapse the navbar on menu item click in mobile
+    	if ($('.navbar-toggler').css('display') !== 'none') {
+	    	$('.navbar-collapse').collapse('hide');
+      }
+    },
     
+    // Global app specific functions
+    "click [data-event='sidebar-left-toggle']": function (event, self) {
+      event.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    },
 
 	});
 

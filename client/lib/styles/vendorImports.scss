@@ -1,0 +1,66 @@
+// vendorImports.scss
+
+// NOTE: Font-awesome and bootstrap font imports
+// https://forums.meteor.com/t/meteor-1-6-1-bootstrap-sourcemaps-font-awesome-font-files-npm/41892/3
+
+
+// Bootstrap Overrides
+$body-bg: #E9ECEF;
+$body-color: #868BA1;
+
+$theme-colors: (
+	"primary": #0753A1,
+	"secondary": #868E96,
+  "success": #23BF08,
+  "warning": #F49917,
+  "danger": #DC3545,
+  "info": #17A2B8,
+);
+
+$colors: (
+	"teal": #00B297
+);
+
+$headings-color: #343a40;
+
+// Imports
+// $icon-font-path: "/fonts/bootstrap/"; // Only for v3
+@import "{}/node_modules/bootstrap/scss/bootstrap.scss";
+
+// Font-awesome Officical NPM v5?
+$fa-font-path: "/fonts/";
+// NOTE: Base imports file still not working
+// @import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/fontawesome.scss";
+@import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/variables";
+@import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/mixins";
+@import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/core";
+@import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/larger";
+@import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/fixed-width";
+@import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/list";
+@import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/bordered-pulled";
+@import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/animated";
+@import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/rotated-flipped";
+@import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/stacked";
+@import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/icons";
+@import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/screen-reader";
+
+// Importing all during prototyping
+@import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/fa-brands.scss";
+@import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/fa-regular.scss";
+@import "{}/node_modules/@fortawesome/fontawesome-free-webfonts/scss/fa-solid.scss";
+
+// old 4.7 package imports
+// @import "{}/node_modules/font-awesome/scss/font-awesome.scss";
+// @import "{}/node_modules/font-awesome/scss/variables";
+// @import "{}/node_modules/font-awesome/scss/mixins";
+// @import "{}/node_modules/font-awesome/scss/path";
+// @import "{}/node_modules/font-awesome/scss/core";
+// @import "{}/node_modules/font-awesome/scss/larger";
+// @import "{}/node_modules/font-awesome/scss/fixed-width";
+// @import "{}/node_modules/font-awesome/scss/list";
+// @import "{}/node_modules/font-awesome/scss/bordered-pulled";
+// @import "{}/node_modules/font-awesome/scss/animated";
+// @import "{}/node_modules/font-awesome/scss/rotated-flipped";
+// @import "{}/node_modules/font-awesome/scss/stacked";
+// @import "{}/node_modules/font-awesome/scss/icons";
+// @import "{}/node_modules/font-awesome/scss/screen-reader";
